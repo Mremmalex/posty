@@ -15,11 +15,11 @@
 
             <li><a href=" {{route('dashboard')}} " class="p-3">Dashboard</a></li>
 
-            <li><a href="" class="p-3">Post</a></li>
+            <li><a href="{{ route('post') }}" class="p-3">Post</a></li>
         </ul>
         <ul class="flex items-center">
             @auth
-            <li><a href="" class="p-3">Alex Garrat</a></li>
+            <li><a href="" class="p-3">{{ auth()->user()->name}}</a></li>
             <li>
                 <form class="inline" action="{{ route('logout')}}" method="POST">
                     @csrf
